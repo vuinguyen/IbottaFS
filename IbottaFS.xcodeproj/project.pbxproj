@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		52ECB3A01DB17C2300CC6B65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB39F1DB17C2300CC6B65 /* AppDelegate.swift */; };
-		52ECB3A21DB17C2300CC6B65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3A11DB17C2300CC6B65 /* ViewController.swift */; };
+		52ECB3A21DB17C2300CC6B65 /* OfferChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3A11DB17C2300CC6B65 /* OfferChecklistViewController.swift */; };
 		52ECB3A51DB17C2300CC6B65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52ECB3A31DB17C2300CC6B65 /* Main.storyboard */; };
 		52ECB3A71DB17C2300CC6B65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52ECB3A61DB17C2300CC6B65 /* Assets.xcassets */; };
 		52ECB3AA1DB17C2300CC6B65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52ECB3A81DB17C2300CC6B65 /* LaunchScreen.storyboard */; };
 		52ECB3B51DB17C2300CC6B65 /* IbottaFSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3B41DB17C2300CC6B65 /* IbottaFSTests.swift */; };
 		52ECB3C01DB17C2300CC6B65 /* IbottaFSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3BF1DB17C2300CC6B65 /* IbottaFSUITests.swift */; };
+		52ECB3CE1DB27A9E00CC6B65 /* OfferItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3CD1DB27A9E00CC6B65 /* OfferItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		52ECB39C1DB17C2300CC6B65 /* IbottaFS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IbottaFS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52ECB39F1DB17C2300CC6B65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52ECB3A11DB17C2300CC6B65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52ECB3A11DB17C2300CC6B65 /* OfferChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferChecklistViewController.swift; sourceTree = "<group>"; };
 		52ECB3A41DB17C2300CC6B65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52ECB3A61DB17C2300CC6B65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52ECB3A91DB17C2300CC6B65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		52ECB3BB1DB17C2300CC6B65 /* IbottaFSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IbottaFSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52ECB3BF1DB17C2300CC6B65 /* IbottaFSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbottaFSUITests.swift; sourceTree = "<group>"; };
 		52ECB3C11DB17C2300CC6B65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52ECB3CD1DB27A9E00CC6B65 /* OfferItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				52ECB39F1DB17C2300CC6B65 /* AppDelegate.swift */,
-				52ECB3A11DB17C2300CC6B65 /* ViewController.swift */,
+				52ECB3A11DB17C2300CC6B65 /* OfferChecklistViewController.swift */,
 				52ECB3A31DB17C2300CC6B65 /* Main.storyboard */,
 				52ECB3A61DB17C2300CC6B65 /* Assets.xcassets */,
 				52ECB3A81DB17C2300CC6B65 /* LaunchScreen.storyboard */,
 				52ECB3AB1DB17C2300CC6B65 /* Info.plist */,
+				52ECB3CD1DB27A9E00CC6B65 /* OfferItem.swift */,
 			);
 			path = IbottaFS;
 			sourceTree = "<group>";
@@ -256,7 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52ECB3A21DB17C2300CC6B65 /* ViewController.swift in Sources */,
+				52ECB3CE1DB27A9E00CC6B65 /* OfferItem.swift in Sources */,
+				52ECB3A21DB17C2300CC6B65 /* OfferChecklistViewController.swift in Sources */,
 				52ECB3A01DB17C2300CC6B65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
