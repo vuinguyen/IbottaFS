@@ -15,6 +15,8 @@
 		52ECB3B51DB17C2300CC6B65 /* IbottaFSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3B41DB17C2300CC6B65 /* IbottaFSTests.swift */; };
 		52ECB3C01DB17C2300CC6B65 /* IbottaFSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3BF1DB17C2300CC6B65 /* IbottaFSUITests.swift */; };
 		52ECB3CE1DB27A9E00CC6B65 /* OfferItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3CD1DB27A9E00CC6B65 /* OfferItem.swift */; };
+		52ECB3D21DB2C0C900CC6B65 /* OfferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3D11DB2C0C900CC6B65 /* OfferDetailViewController.swift */; };
+		52ECB3D41DB3028400CC6B65 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3D31DB3028400CC6B65 /* UIImageView+DownloadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		52ECB3BF1DB17C2300CC6B65 /* IbottaFSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbottaFSUITests.swift; sourceTree = "<group>"; };
 		52ECB3C11DB17C2300CC6B65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52ECB3CD1DB27A9E00CC6B65 /* OfferItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferItem.swift; sourceTree = "<group>"; };
+		52ECB3D11DB2C0C900CC6B65 /* OfferDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferDetailViewController.swift; sourceTree = "<group>"; };
+		52ECB3D31DB3028400CC6B65 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				52ECB3A81DB17C2300CC6B65 /* LaunchScreen.storyboard */,
 				52ECB3AB1DB17C2300CC6B65 /* Info.plist */,
 				52ECB3CD1DB27A9E00CC6B65 /* OfferItem.swift */,
+				52ECB3D11DB2C0C900CC6B65 /* OfferDetailViewController.swift */,
+				52ECB3D31DB3028400CC6B65 /* UIImageView+DownloadImage.swift */,
 			);
 			path = IbottaFS;
 			sourceTree = "<group>";
@@ -259,9 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52ECB3D21DB2C0C900CC6B65 /* OfferDetailViewController.swift in Sources */,
 				52ECB3CE1DB27A9E00CC6B65 /* OfferItem.swift in Sources */,
 				52ECB3A21DB17C2300CC6B65 /* OfferChecklistViewController.swift in Sources */,
 				52ECB3A01DB17C2300CC6B65 /* AppDelegate.swift in Sources */,
+				52ECB3D41DB3028400CC6B65 /* UIImageView+DownloadImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

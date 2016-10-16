@@ -11,6 +11,8 @@ import Foundation
 
 class OfferItem {
     var id = 9999
-    var name = "Awesome Product Here"
+    var name = "Awesome Product Name"
+    var description = "Awesome Product Description"
+    var url = "http://nerdapproved.com/wp-content/uploads/2015/07/everything-is-awesome.jpg"
     var retailerIds = []
 }
