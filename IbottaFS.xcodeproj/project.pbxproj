@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		527A63A11DB4869B001444D0 /* OfferCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A63A01DB4869B001444D0 /* OfferCategoryViewController.swift */; };
 		52ECB3A01DB17C2300CC6B65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB39F1DB17C2300CC6B65 /* AppDelegate.swift */; };
 		52ECB3A21DB17C2300CC6B65 /* OfferChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3A11DB17C2300CC6B65 /* OfferChecklistViewController.swift */; };
 		52ECB3A51DB17C2300CC6B65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52ECB3A31DB17C2300CC6B65 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 		52ECB3CE1DB27A9E00CC6B65 /* OfferItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3CD1DB27A9E00CC6B65 /* OfferItem.swift */; };
 		52ECB3D21DB2C0C900CC6B65 /* OfferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3D11DB2C0C900CC6B65 /* OfferDetailViewController.swift */; };
 		52ECB3D41DB3028400CC6B65 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3D31DB3028400CC6B65 /* UIImageView+DownloadImage.swift */; };
+		52ECB3D81DB3323000CC6B65 /* OfferCategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3D71DB3323000CC6B65 /* OfferCategoryManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		527A63A01DB4869B001444D0 /* OfferCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferCategoryViewController.swift; sourceTree = "<group>"; };
 		52ECB39C1DB17C2300CC6B65 /* IbottaFS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IbottaFS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52ECB39F1DB17C2300CC6B65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52ECB3A11DB17C2300CC6B65 /* OfferChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferChecklistViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		52ECB3CD1DB27A9E00CC6B65 /* OfferItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferItem.swift; sourceTree = "<group>"; };
 		52ECB3D11DB2C0C900CC6B65 /* OfferDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferDetailViewController.swift; sourceTree = "<group>"; };
 		52ECB3D31DB3028400CC6B65 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
+		52ECB3D71DB3323000CC6B65 /* OfferCategoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferCategoryManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				52ECB3CD1DB27A9E00CC6B65 /* OfferItem.swift */,
 				52ECB3D11DB2C0C900CC6B65 /* OfferDetailViewController.swift */,
 				52ECB3D31DB3028400CC6B65 /* UIImageView+DownloadImage.swift */,
+				52ECB3D71DB3323000CC6B65 /* OfferCategoryManager.swift */,
+				527A63A01DB4869B001444D0 /* OfferCategoryViewController.swift */,
 			);
 			path = IbottaFS;
 			sourceTree = "<group>";
@@ -266,6 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				52ECB3D21DB2C0C900CC6B65 /* OfferDetailViewController.swift in Sources */,
+				52ECB3D81DB3323000CC6B65 /* OfferCategoryManager.swift in Sources */,
+				527A63A11DB4869B001444D0 /* OfferCategoryViewController.swift in Sources */,
 				52ECB3CE1DB27A9E00CC6B65 /* OfferItem.swift in Sources */,
 				52ECB3A21DB17C2300CC6B65 /* OfferChecklistViewController.swift in Sources */,
 				52ECB3A01DB17C2300CC6B65 /* AppDelegate.swift in Sources */,
@@ -494,6 +502,7 @@
 				52ECB3C61DB17C2300CC6B65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52ECB3C71DB17C2300CC6B65 /* Build configuration list for PBXNativeTarget "IbottaFSTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +511,7 @@
 				52ECB3C91DB17C2300CC6B65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52ECB3CA1DB17C2300CC6B65 /* Build configuration list for PBXNativeTarget "IbottaFSUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +520,7 @@
 				52ECB3CC1DB17C2300CC6B65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
