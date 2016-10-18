@@ -12,13 +12,9 @@ import UIKit
 
 class OfferAvailableViewController : UITableViewController {
     
-    
     var items: [OfferItem]?
     var offerCategory: String?
     
-    //func updateOfferAvailableTable() {
-    //    self.tableView.reloadData()
-    //}
     // Okay, so initialization from values that's NOT passed in from a seque
     // can happen in init, but if it's coming from a seque it should be in viewDidLoad
     override func viewDidLoad() {
@@ -62,6 +58,16 @@ class OfferAvailableViewController : UITableViewController {
         label.text = item.name
     }
     // table specific functions: END
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "OfferAdd" {
+            let controller = segue.destinationViewController as! OfferDetailViewController
+            
+            if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
+                controller.offerDetailsToDisplay = items![indexPath.row]
+            }
+        }
+    }
     
     
 }

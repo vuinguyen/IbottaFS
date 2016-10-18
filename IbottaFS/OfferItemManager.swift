@@ -8,10 +8,6 @@
 
 import Foundation
 
-//protocol OfferItemManagerDelegate: class {
-//    func updateOfferAvailableTable()
-//}
-
 class OfferItemManager {
     
     let filename = "Offers"
@@ -58,27 +54,53 @@ class OfferItemManager {
                 
                 if let categoryArray = resultDict["categories"] as? [[String: AnyObject]] {
                     //print(categoryArray[0]["name"])
+                    offerItem = OfferItem()
                     for category in categoryArray {
                         if (category["name"] as! String) == offerCategory {
-                            offerItem = OfferItem()
+                            
                             
                             counter = counter + 1
                             print("counter: \(counter)")
                             
-                            print(resultDict["name"])
-                            print(resultDict["retailers"])
+                            print("id: \(resultDict["id"])")
+                            print("name: \(resultDict["name"])")
+                            print("retailers: \(resultDict["retailers"])")
+                            print("description: \(resultDict["description"])")
+                            print("url: \(resultDict["url"])")
+                            
+                            if (resultDict["id"] as? Int) != nil {
+                                offerItem.id = resultDict["id"] as! Int
+                            }
                             
                             if (resultDict["name"] as? String) != nil {
                                 offerItem.name = resultDict["name"] as! String
-                                offerItemArray.append(offerItem)
+                            }   // end if resultDict["name"] not nil
                             
-                                // print(resultDict)
-                                print("^^^^^^^^^^^^^^^^")
+                            
+                            if (resultDict["description"] as? String) != nil {
+                                offerItem.description = resultDict["description"] as! String
                             }
-                        }
-                    }
-                }
-            }
+ 
+                            
+                            if (resultDict["url"] as? String)  != nil {
+                                offerItem.url = resultDict["url"] as! String
+                                
+                            }
+                            
+                            // add offerItem after all valid values are set
+                            offerItemArray.append(offerItem)
+                            // print(resultDict)
+                            print("^^^^^^^^^^^^^^^^")
+                        } // if category == offerCategory
+                        
+                        
+                    }   // for category in categoryArray
+                    
+                    
+                   
+                } //let categoryArray = resultDict
+                
+            }   // resultDict = resultDict
             
         }   // end for resultDict in array
         
