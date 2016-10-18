@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol OfferAvailableViewControllerDelegate {
+    // keep popping views off the navcontroller stack and pass the OfferItem back to the checklist screen
+    func offerAvailableViewController(controller: OfferAvailableViewController, didFinishAddingOffer offer: OfferItem)
+}
 
-
-class OfferAvailableViewController : UITableViewController {
+class OfferAvailableViewController : UITableViewController, OfferDetailViewControllerDelegate {
     
     var items: [OfferItem]?
     var offerCategory: String?
+    
+    var delegate: OfferAvailableViewControllerDelegate?
     
     // Okay, so initialization from values that's NOT passed in from a seque
     // can happen in init, but if it's coming from a seque it should be in viewDidLoad
@@ -30,7 +35,15 @@ class OfferAvailableViewController : UITableViewController {
         }
     }
     
-    
+    func offerDetailViewController(controller: OfferDetailViewController, didFinishAddingOffer offer: OfferItem) {
+        print("in offerDetailViewController delegate")
+        
+       
+        
+        navigationController?.popViewControllerAnimated(true)
+        delegate?.offerAvailableViewController(self, didFinishAddingOffer: offer)
+       
+    }
     
     // table specific functions: BEGIN
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,6 +78,8 @@ class OfferAvailableViewController : UITableViewController {
             
             if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
                 controller.offerDetailsToDisplay = items![indexPath.row]
+                controller.addOffer = true
+                controller.delegate = self
             }
         }
     }

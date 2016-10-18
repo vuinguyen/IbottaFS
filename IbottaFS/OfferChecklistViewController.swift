@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OfferChecklistViewController: UITableViewController {
+class OfferChecklistViewController: UITableViewController, OfferCategoryViewControllerDelegate {
 
     var items: [OfferItem]
     
@@ -55,6 +55,19 @@ class OfferChecklistViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func offerCategoryViewControllerDelegate(controller: OfferCategoryViewController, didFinishAddingOffer offer: OfferItem) {
+        print("in offerCategoryViewControllerDelegate")
+        
+        let newRowIndex = items.count
+        items.append(offer)
+        
+        let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+        
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
 
     // table specific functions: BEGIN
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -85,6 +98,12 @@ class OfferChecklistViewController: UITableViewController {
                 controller.offerDetailsToDisplay = items[indexPath.row]
             }
             
+        }
+        
+        if segue.identifier == "OfferCategory" {
+            let controller = segue.destinationViewController as! OfferCategoryViewController
+            
+            controller.delegate = self
         }
     }
     

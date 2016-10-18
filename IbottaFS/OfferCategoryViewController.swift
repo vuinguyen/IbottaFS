@@ -8,9 +8,16 @@
 
 import UIKit
 
-class OfferCategoryViewController : UITableViewController {
+protocol  OfferCategoryViewControllerDelegate {
+    // keep popping views off the navcontroller stack and pass the OfferItem back to the checklist screen
+    func offerCategoryViewControllerDelegate(controller: OfferCategoryViewController, didFinishAddingOffer offer: OfferItem)
+}
+
+class OfferCategoryViewController : UITableViewController, OfferAvailableViewControllerDelegate {
     
     var categories: [String]
+    
+    var delegate: OfferCategoryViewControllerDelegate?
     
     required init?(coder aDecoder: NSCoder) {
         categories = OfferCategoryManager().getCategoryArray()
@@ -28,6 +35,17 @@ class OfferCategoryViewController : UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func offerAvailableViewController(controller: OfferAvailableViewController, didFinishAddingOffer offer: OfferItem) {
+        print("in offerAvailableViewController delegate")
+        
+        
+        
+        navigationController?.popViewControllerAnimated(true)
+        
+        delegate?.offerCategoryViewControllerDelegate(self, didFinishAddingOffer: offer)
+        
     }
     
     // table specific functions: BEGIN
@@ -57,6 +75,7 @@ class OfferCategoryViewController : UITableViewController {
             
             if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
                 controller.offerCategory = categories[indexPath.row]
+                controller.delegate = self
             }
             
         }
