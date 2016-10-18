@@ -21,6 +21,8 @@ class OfferCategoryViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,4 +49,15 @@ class OfferCategoryViewController : UITableViewController {
         let label = cell.viewWithTag(2000) as! UILabel
         label.text = category
     }
-}
+    // table specific functions: END
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "OfferAvailable" {
+            let controller = segue.destinationViewController as! OfferAvailableViewController
+            
+            if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
+                controller.offerCategory = categories[indexPath.row]
+            }
+            
+        }
+    }}

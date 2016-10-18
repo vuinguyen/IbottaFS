@@ -49,7 +49,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lxb-A6-OER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3839" y="469"/>
+            <point key="canvasLocation" x="-3957" y="469"/>
         </scene>
         <!--Offer Categories-->
         <scene sceneID="dZc-wV-MqQ">
@@ -75,6 +75,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="UXr-zI-gnU" kind="show" identifier="OfferAvailable" id="BZM-tr-Yqn"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -86,7 +89,44 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VkS-bc-2QT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3144" y="469"/>
+            <point key="canvasLocation" x="-3252" y="469"/>
+        </scene>
+        <!--Offers Available-->
+        <scene sceneID="M5I-8G-hkF">
+            <objects>
+                <tableViewController id="UXr-zI-gnU" customClass="OfferAvailableViewController" customModule="IbottaFS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="35y-RY-QEY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OfferAvailable" id="pxn-9R-ZyT">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pxn-9R-ZyT" id="kKV-L6-Qw0">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f0-Zd-wEc">
+                                            <rect key="frame" x="8" y="11" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UXr-zI-gnU" id="SnK-6C-uqa"/>
+                            <outlet property="delegate" destination="UXr-zI-gnU" id="TBo-Kv-JOQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Offers Available" id="457-fo-8XF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtB-0C-vZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2553" y="469"/>
         </scene>
         <!--Offer Details-->
         <scene sceneID="sfB-WR-x8v">
@@ -189,7 +229,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMY-jb-PgM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3839" y="1184"/>
+            <point key="canvasLocation" x="-3957" y="1190"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CSB-EG-adi">
