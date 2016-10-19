@@ -16,7 +16,7 @@ protocol OfferAvailableViewControllerDelegate {
 class OfferAvailableViewController : UITableViewController, OfferDetailViewControllerDelegate {
     
     var items: [OfferItem]?
-    var offerCategory: String?
+    var offerCategory: OfferCategory?
     
     var delegate: OfferAvailableViewControllerDelegate?
     
@@ -27,7 +27,7 @@ class OfferAvailableViewController : UITableViewController, OfferDetailViewContr
         // Do any additional setup after loading the view, typically from a nib.
         
         if let category = offerCategory {
-            print(category)
+            print(category.name)
             OfferItemManager().getOffersForCategory(category) { (offerItemArray) -> Void in
                 self.items = offerItemArray
                 self.tableView.reloadData()

@@ -17,6 +17,7 @@
 		527A63B21DB7210A001444D0 /* OfferChecklistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A63B11DB7210A001444D0 /* OfferChecklistManager.swift */; };
 		527A63B41DB7216A001444D0 /* Retailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A63B31DB7216A001444D0 /* Retailer.swift */; };
 		527A63B61DB7E84F001444D0 /* RetailerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A63B51DB7E84F001444D0 /* RetailerListViewController.swift */; };
+		527A63B81DB7FA9E001444D0 /* OfferCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A63B71DB7FA9E001444D0 /* OfferCategory.swift */; };
 		52ECB3A01DB17C2300CC6B65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB39F1DB17C2300CC6B65 /* AppDelegate.swift */; };
 		52ECB3A21DB17C2300CC6B65 /* OfferChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3A11DB17C2300CC6B65 /* OfferChecklistViewController.swift */; };
 		52ECB3A51DB17C2300CC6B65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52ECB3A31DB17C2300CC6B65 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		527A63B11DB7210A001444D0 /* OfferChecklistManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferChecklistManager.swift; sourceTree = "<group>"; };
 		527A63B31DB7216A001444D0 /* Retailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Retailer.swift; sourceTree = "<group>"; };
 		527A63B51DB7E84F001444D0 /* RetailerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetailerListViewController.swift; sourceTree = "<group>"; };
+		527A63B71DB7FA9E001444D0 /* OfferCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferCategory.swift; sourceTree = "<group>"; };
 		52ECB39C1DB17C2300CC6B65 /* IbottaFS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IbottaFS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52ECB39F1DB17C2300CC6B65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52ECB3A11DB17C2300CC6B65 /* OfferChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferChecklistViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				527A63B11DB7210A001444D0 /* OfferChecklistManager.swift */,
 				527A63B31DB7216A001444D0 /* Retailer.swift */,
 				527A63B51DB7E84F001444D0 /* RetailerListViewController.swift */,
+				527A63B71DB7FA9E001444D0 /* OfferCategory.swift */,
 			);
 			path = IbottaFS;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				52ECB3D81DB3323000CC6B65 /* OfferCategoryManager.swift in Sources */,
 				527A63A11DB4869B001444D0 /* OfferCategoryViewController.swift in Sources */,
 				527A63A31DB539D6001444D0 /* OfferAvailableViewController.swift in Sources */,
+				527A63B81DB7FA9E001444D0 /* OfferCategory.swift in Sources */,
 				52ECB3CE1DB27A9E00CC6B65 /* OfferItem.swift in Sources */,
 				52ECB3A21DB17C2300CC6B65 /* OfferChecklistViewController.swift in Sources */,
 				52ECB3A01DB17C2300CC6B65 /* AppDelegate.swift in Sources */,

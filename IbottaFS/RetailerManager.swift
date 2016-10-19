@@ -12,9 +12,6 @@ class RetailerManager {
     
     static let filename = "Retailers"
     
-    // a dictionary of all the possible retailers
-    var allRetailersDictionary: [Int: String] = [Int: String]()
-    
     // an array of all the possible Retailers
     static var allRetailersArray: [Retailer] = [Retailer]()
     
@@ -102,7 +99,7 @@ class RetailerManager {
         }   // end dispatch_async(queue)
     }
     
-        // given an array of retailer id's, return an array of Retailer objects
+    // given an array of retailer id's, return an array of Retailer objects
     static func getRetailersForIds(retailerIds: [Int]) -> [Retailer] {
         var retailerArrayForId: [Retailer] = [Retailer]()
         
@@ -129,21 +126,5 @@ class RetailerManager {
         return retailerArrayForId
     }
     
-    
-    // return a dictionary of all the Retailers and their ids
-    func getAllRetailersDictionary() -> [Int: String] {
-        
-        if (allRetailersDictionary.isEmpty) {
-            
-        }
-        
-        return allRetailersDictionary
-    }
-    
-    // given an array of retailer id's, return an array of corresponding strings
-    func RetailerStrings(retailerIds: [Int]) -> [String] {
-        let retailerStrings: [String] = []
-        return retailerStrings
-    }
     
 }

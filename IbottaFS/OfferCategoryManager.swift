@@ -10,15 +10,17 @@ import Foundation
 
 class OfferCategoryManager {
     
-    var categorySet: Set<String> = [
-        "Personal Care",
-        "Health",
-        "Condiments",
-        "Canned Goods",
-        "Frozen",
-        "Beverages",
-        "Back 2 School"
-                                    ]
+    static var categorySet: Set<OfferCategory> = [
+        OfferCategory("Personal Care"),
+        OfferCategory("Health"),
+        OfferCategory("Condiments"),
+        OfferCategory("Canned Goods"),
+        OfferCategory("Frozen"),
+        OfferCategory("Beverages"),
+        OfferCategory("Back 2 School")
+    ]
+    
+    static var allCategoriesArray: [OfferCategory] = [OfferCategory]()
     
     enum Category: String {
         case PersonalCare = "Personal Care"
@@ -41,15 +43,20 @@ class OfferCategoryManager {
                                                     "Back2School": "Back 2 School"
 
                                                 ]
-    internal func getCategorySet() -> Set<String> {
+    static func getCategorySet() -> Set<OfferCategory> {
         return categorySet
     }
     
-    internal func getCategoryArray() -> [String] {
-        var categoryArray = [String]()
-        for category in categorySet.sort() {
+    static func getCategoryArray() -> [OfferCategory] {
+        var categoryArray = [OfferCategory]()
+        for category in categorySet {
             categoryArray.append(category)
         }
         return categoryArray
     }
+    
+    static func getAllCategoriesArray(success:(allCategoriesArray: [OfferCategory]) -> Void) -> Void {
+        
+    }
+    
 }

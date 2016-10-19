@@ -10,7 +10,7 @@ import Foundation
 
 
 class OfferItem {
-    var categoryDictionary = OfferCategoryManager().categoryDictionary
+    //var categoryDictionary = OfferCategoryManager().categoryDictionary
     
     
     var id = 9999
@@ -19,8 +19,7 @@ class OfferItem {
     var url = "http://nerdapproved.com/wp-content/uploads/2015/07/everything-is-awesome.jpg"
     var retailerIds = []
     var retailerArray: [Retailer] = [Retailer]()
-    //var retailerDict: [Int: String] = [:]   // key: retailer id, value: retailer name
     
-    var categories = [OfferCategoryManager.Category.Back2School,
-                      OfferCategoryManager.Category.Beverages]
+    //var categories = [OfferCategoryManager.Category.Back2School,
+    //                  OfferCategoryManager.Category.Beverages]
 }

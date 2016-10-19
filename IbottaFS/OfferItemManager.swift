@@ -25,7 +25,7 @@ class OfferItemManager {
     
     
     // parse NSData (in JSON format) by category into OfferItem objects
-       private func parseDataForCategory(data: NSData, offerCategory: String) -> [OfferItem] {
+       private func parseDataForCategory(data: NSData, offerCategory: OfferCategory) -> [OfferItem] {
             
             var offerItemArray = [OfferItem]()
             
@@ -54,7 +54,7 @@ class OfferItemManager {
                     //print(categoryArray[0]["name"])
                     offerItem = OfferItem()
                     for category in categoryArray {
-                        if (category["name"] as! String) == offerCategory {
+                        if (category["name"] as! String) == offerCategory.name {
                             
                             
                             counter = counter + 1
@@ -113,7 +113,7 @@ class OfferItemManager {
     // Find Offers for a given category from the JSON file
     // Then, update the UI (or whatever we want the completion handler to do)
     // with the Offers we found
-    func getOffersForCategory(offerCategory: String, success:((offerItemArray: [OfferItem]) -> Void)) -> Void {
+    func getOffersForCategory(offerCategory: OfferCategory, success:((offerItemArray: [OfferItem]) -> Void)) -> Void {
     
         var offerItemArray: [OfferItem] = []
         //print("called getOffersForCategory")
