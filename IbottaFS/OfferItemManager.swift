@@ -87,6 +87,7 @@ class OfferItemManager {
                             
                             if (resultDict["retailers"] as? [Int]) != nil {
                                 offerItem.retailerIds = resultDict["retailers"] as! [Int]
+                                offerItem.retailerString = offerItem.getRetailerString(withIds: offerItem.retailerIds as! [Int])
                             }
                             
                             // add offerItem after all valid values are set

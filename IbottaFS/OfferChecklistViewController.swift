@@ -12,6 +12,7 @@ class OfferChecklistViewController: UITableViewController, OfferCategoryViewCont
 
     var items: [OfferItem] = [OfferItem]()
     var allRetailers: [Retailer]?
+    //var retailerStrings: [String]?
     
    // required init?(coder aDecoder: NSCoder) {
         
@@ -22,9 +23,10 @@ class OfferChecklistViewController: UITableViewController, OfferCategoryViewCont
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-         items = OfferChecklistManager.getDefaultOfferChecklist()
+        
          RetailerManager.getAllRetailersArray { (retailers) -> Void in
               self.allRetailers = retailers
+              self.items = OfferChecklistManager.getDefaultOfferChecklist()
               self.tableView.reloadData()
           }
     }
@@ -63,8 +65,18 @@ class OfferChecklistViewController: UITableViewController, OfferCategoryViewCont
     }
     
     func configureOfferForCell(cell: UITableViewCell, withOfferItem item: OfferItem) {
-        let label = cell.viewWithTag(1000) as! UILabel
-        label.text = item.name
+        let offerLabel = cell.viewWithTag(1000) as! UILabel
+        offerLabel.text = item.name
+        
+        let retailerLabel = cell.viewWithTag(5000) as! UILabel
+       // let retailerArray = item.retailerArray
+        
+        //let retailerString = "la la"
+        //for retailer in retailerArray {
+       //     retailerString.appendContentsOf(retailer.name)
+      //  }
+        retailerLabel.text = "Available at: " + item.getRetailerString()
+        
     }
     
     // this allows for deleting of rows

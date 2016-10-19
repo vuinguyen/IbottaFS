@@ -18,17 +18,13 @@ class OfferCategoryViewController : UITableViewController, OfferAvailableViewCon
     var categories: [OfferCategory]?
     
     var delegate: OfferCategoryViewControllerDelegate?
-
-    //required init?(coder aDecoder: NSCoder) {
-        
-    //    super.init(coder: aDecoder)
-    //}
    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         /*
+         // Call default categories that were hardcode before
         let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
         dispatch_async(queue) {
         

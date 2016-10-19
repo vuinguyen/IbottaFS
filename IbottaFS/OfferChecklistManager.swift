@@ -19,6 +19,7 @@ class OfferChecklistManager {
         row0item.description = "60 ct. or larger"
         row0item.url = "http://product-images.ibotta.com/offer/O1lEIO7SFwbJ2NRfAsicKA-normal.png"
         row0item.retailerIds = [3]
+        row0item.retailerString = row0item.getRetailerString(withIds: row0item.retailerIds as! [Int])
         items.append(row0item)
         
         let row1item = OfferItem()
@@ -27,6 +28,7 @@ class OfferChecklistManager {
         row1item.description = "Any variety - 3.8 - 6 oz. can"
         row1item.url = "http://product-images.ibotta.com/offer/hctk-9uRW09YKPBNmEZfnA-normal.png"
         row1item.retailerIds = [19]
+        row1item.retailerString = row1item.getRetailerString(withIds: row1item.retailerIds as! [Int])
         items.append(row1item)
         
         let row2item = OfferItem()
@@ -35,6 +37,7 @@ class OfferChecklistManager {
         row2item.description = "48 oz. Twin Pack"
         row2item.url = "http://product-images.ibotta.com/offer/Ynm1jdu37TocxxabQmHW0g-normal.png"
         row2item.retailerIds = [4]
+        row2item.retailerString = row2item.getRetailerString(withIds: row2item.retailerIds as! [Int])
         items.append(row2item)
         
         let row3item = OfferItem()
@@ -59,6 +62,7 @@ class OfferChecklistManager {
                                 7,
                                 20,
                                 2]
+        row3item.retailerString = row3item.getRetailerString(withIds: row3item.retailerIds as! [Int])
         items.append(row3item)
         
         return items
