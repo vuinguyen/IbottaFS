@@ -36,6 +36,7 @@ class OfferDetailViewController: UITableViewController {
         if let item = offerDetailsToDisplay {
             print(item.name)
             print(item.id)
+            print(item.retailerIds)
             
             nameLabel.text = item.name
             descriptionLabel.text = item.description
@@ -45,8 +46,6 @@ class OfferDetailViewController: UITableViewController {
                 downloadTask = productImage.loadImageWithURL(imageUrl)
             }
         }
-        
-        
         
         if let addItem = addOffer {
             if (addItem == true) {

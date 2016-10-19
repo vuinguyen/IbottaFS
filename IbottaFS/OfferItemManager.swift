@@ -11,6 +11,8 @@ import Foundation
 class OfferItemManager {
     
     let filename = "Offers"
+
+    
     
     // this function reads local JSON file and returns JSON in NSData format
     func readLocalJSONFile(filename: String) -> NSData  {
@@ -85,6 +87,10 @@ class OfferItemManager {
                             if (resultDict["url"] as? String)  != nil {
                                 offerItem.url = resultDict["url"] as! String
                                 
+                            }
+                            
+                            if (resultDict["retailers"] as? [Int]) != nil {
+                                offerItem.retailerIds = resultDict["retailers"] as! [Int]
                             }
                             
                             // add offerItem after all valid values are set

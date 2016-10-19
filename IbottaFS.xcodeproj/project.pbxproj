@@ -12,8 +12,10 @@
 		527A63A81DB540F1001444D0 /* Offers.json in Resources */ = {isa = PBXBuildFile; fileRef = 527A63A51DB540F1001444D0 /* Offers.json */; };
 		527A63A91DB540F1001444D0 /* Retailers.json in Resources */ = {isa = PBXBuildFile; fileRef = 527A63A61DB540F1001444D0 /* Retailers.json */; };
 		527A63AA1DB540F1001444D0 /* Store Locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 527A63A71DB540F1001444D0 /* Store Locations.json */; };
-		527A63AC1DB544C2001444D0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A63AB1DB544C2001444D0 /* DataManager.swift */; };
 		527A63AE1DB55A1F001444D0 /* OfferItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A63AD1DB55A1F001444D0 /* OfferItemManager.swift */; };
+		527A63B01DB7199E001444D0 /* RetailerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A63AF1DB7199E001444D0 /* RetailerManager.swift */; };
+		527A63B21DB7210A001444D0 /* OfferChecklistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A63B11DB7210A001444D0 /* OfferChecklistManager.swift */; };
+		527A63B41DB7216A001444D0 /* Retailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A63B31DB7216A001444D0 /* Retailer.swift */; };
 		52ECB3A01DB17C2300CC6B65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB39F1DB17C2300CC6B65 /* AppDelegate.swift */; };
 		52ECB3A21DB17C2300CC6B65 /* OfferChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECB3A11DB17C2300CC6B65 /* OfferChecklistViewController.swift */; };
 		52ECB3A51DB17C2300CC6B65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52ECB3A31DB17C2300CC6B65 /* Main.storyboard */; };
@@ -50,8 +52,10 @@
 		527A63A51DB540F1001444D0 /* Offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Offers.json; sourceTree = "<group>"; };
 		527A63A61DB540F1001444D0 /* Retailers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Retailers.json; sourceTree = "<group>"; };
 		527A63A71DB540F1001444D0 /* Store Locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Store Locations.json"; sourceTree = "<group>"; };
-		527A63AB1DB544C2001444D0 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		527A63AD1DB55A1F001444D0 /* OfferItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferItemManager.swift; sourceTree = "<group>"; };
+		527A63AF1DB7199E001444D0 /* RetailerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetailerManager.swift; sourceTree = "<group>"; };
+		527A63B11DB7210A001444D0 /* OfferChecklistManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferChecklistManager.swift; sourceTree = "<group>"; };
+		527A63B31DB7216A001444D0 /* Retailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Retailer.swift; sourceTree = "<group>"; };
 		52ECB39C1DB17C2300CC6B65 /* IbottaFS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IbottaFS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52ECB39F1DB17C2300CC6B65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52ECB3A11DB17C2300CC6B65 /* OfferChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferChecklistViewController.swift; sourceTree = "<group>"; };
@@ -143,8 +147,10 @@
 				52ECB3D71DB3323000CC6B65 /* OfferCategoryManager.swift */,
 				527A63A01DB4869B001444D0 /* OfferCategoryViewController.swift */,
 				527A63A21DB539D6001444D0 /* OfferAvailableViewController.swift */,
-				527A63AB1DB544C2001444D0 /* DataManager.swift */,
 				527A63AD1DB55A1F001444D0 /* OfferItemManager.swift */,
+				527A63AF1DB7199E001444D0 /* RetailerManager.swift */,
+				527A63B11DB7210A001444D0 /* OfferChecklistManager.swift */,
+				527A63B31DB7216A001444D0 /* Retailer.swift */,
 			);
 			path = IbottaFS;
 			sourceTree = "<group>";
@@ -301,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527A63B21DB7210A001444D0 /* OfferChecklistManager.swift in Sources */,
 				52ECB3D21DB2C0C900CC6B65 /* OfferDetailViewController.swift in Sources */,
 				52ECB3D81DB3323000CC6B65 /* OfferCategoryManager.swift in Sources */,
 				527A63A11DB4869B001444D0 /* OfferCategoryViewController.swift in Sources */,
@@ -308,7 +315,8 @@
 				52ECB3CE1DB27A9E00CC6B65 /* OfferItem.swift in Sources */,
 				52ECB3A21DB17C2300CC6B65 /* OfferChecklistViewController.swift in Sources */,
 				52ECB3A01DB17C2300CC6B65 /* AppDelegate.swift in Sources */,
-				527A63AC1DB544C2001444D0 /* DataManager.swift in Sources */,
+				527A63B01DB7199E001444D0 /* RetailerManager.swift in Sources */,
+				527A63B41DB7216A001444D0 /* Retailer.swift in Sources */,
 				52ECB3D41DB3028400CC6B65 /* UIImageView+DownloadImage.swift in Sources */,
 				527A63AE1DB55A1F001444D0 /* OfferItemManager.swift in Sources */,
 			);

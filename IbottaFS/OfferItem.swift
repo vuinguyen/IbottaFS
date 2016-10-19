@@ -18,7 +18,8 @@ class OfferItem {
     var description = "Awesome Product Description"
     var url = "http://nerdapproved.com/wp-content/uploads/2015/07/everything-is-awesome.jpg"
     var retailerIds = []
-    var retailerDict: [Int: String] = [:]   // key: retailer id, value: retailer name
+    var retailerArray: [Retailer] = [Retailer]()
+    //var retailerDict: [Int: String] = [:]   // key: retailer id, value: retailer name
     
     var categories = [OfferCategoryManager.Category.Back2School,
                       OfferCategoryManager.Category.Beverages]
