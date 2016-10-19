@@ -11,13 +11,10 @@ import Foundation
 class OfferItemManager {
     
     let filename = "Offers"
-
-    
     
     // this function reads local JSON file and returns JSON in NSData format
-    func readLocalJSONFile(filename: String) -> NSData  {
+    private func readLocalJSONFile() -> NSData  {
         
-            
             let filePath = NSBundle.mainBundle().pathForResource(filename, ofType:"json")
             let data = try! NSData(contentsOfFile:filePath!,
                 options: NSDataReadingOptions.DataReadingUncached)
@@ -28,7 +25,7 @@ class OfferItemManager {
     
     
     // parse NSData (in JSON format) by category into OfferItem objects
-        func parseDataForCategory(data: NSData, offerCategory: String) -> [OfferItem] {
+       private func parseDataForCategory(data: NSData, offerCategory: String) -> [OfferItem] {
             
             var offerItemArray = [OfferItem]()
             
@@ -116,7 +113,7 @@ class OfferItemManager {
 
     // let's also pass in a completion handler to update the UI table, and return
     // an array of OfferItem's
-    internal func getOffersForCategory(offerCategory: String, success:((offerItemArray: [OfferItem]) -> Void)) -> Void {
+    func getOffersForCategory(offerCategory: String, success:((offerItemArray: [OfferItem]) -> Void)) -> Void {
     
         var offerItemArray: [OfferItem] = []
         //print("called getOffersForCategory")
@@ -126,8 +123,8 @@ class OfferItemManager {
         // read in local JSON file into an NSData object on a background thread
         let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
         dispatch_async(queue) {
-            
-            let data = self.readLocalJSONFile(self.filename)
+    
+            let data = self.readLocalJSONFile()
             
             offerItemArray = self.parseDataForCategory(data, offerCategory: offerCategory)
             
