@@ -18,7 +18,7 @@ class OfferCategoryViewController : UITableViewController, OfferAvailableViewCon
     var categories: [OfferCategory]?
     
     var delegate: OfferCategoryViewControllerDelegate?
-    
+
     //required init?(coder aDecoder: NSCoder) {
         
     //    super.init(coder: aDecoder)
@@ -27,6 +27,8 @@ class OfferCategoryViewController : UITableViewController, OfferAvailableViewCon
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        /*
         let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
         dispatch_async(queue) {
         
@@ -35,6 +37,11 @@ class OfferCategoryViewController : UITableViewController, OfferAvailableViewCon
             dispatch_async(dispatch_get_main_queue()) {
                 self.tableView.reloadData()
             }
+        }
+ */
+        OfferCategoryManager.getAllCategoriesArray() { (categoriesArray) -> Void in
+            self.categories = categoriesArray
+            self.tableView.reloadData()
         }
     }
     
@@ -60,7 +67,7 @@ class OfferCategoryViewController : UITableViewController, OfferAvailableViewCon
             return categories!.count
         }
         else {
-            return 1
+            return 0
         }
     }
     

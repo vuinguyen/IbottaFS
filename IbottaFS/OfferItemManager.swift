@@ -37,16 +37,16 @@ class OfferItemManager {
                 print(error)
             }
         
-        //print(json)
-        guard let array = json["offers"] as? [AnyObject] else {
-            print("Expected 'offers' array")
-            return offerItemArray
-        }
-        //print(array[0])
+            //print(json)
+            guard let array = json["offers"] as? [AnyObject] else {
+                print("Expected 'offers' array")
+                return offerItemArray
+            }
+            //print(array[0])
         
-        var counter = 0
-        var offerItem: OfferItem
-        for resultDict in array {
+            var counter = 0
+            var offerItem: OfferItem
+            for resultDict in array {
             
             if let resultDict = resultDict as? [String: AnyObject] {
                 

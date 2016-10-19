@@ -45,7 +45,7 @@ class RetailerListViewController : UITableViewController {
             return retailers!.count
         }
         else {
-            return 1
+            return 0
         }
     }
     
