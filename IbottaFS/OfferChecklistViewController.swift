@@ -88,7 +88,15 @@ class OfferChecklistViewController: UITableViewController, OfferCategoryViewCont
         let label = cell.viewWithTag(1000) as! UILabel
         label.text = item.name
     }
-    // table specific functions: END
+    
+    // this allows for deleting of rows
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle,forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        items.removeAtIndex(indexPath.row)
+        
+        let indexPaths = [indexPath]
+        tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+    }    // table specific functions: END
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "OfferDetails" {
