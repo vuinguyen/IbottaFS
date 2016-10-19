@@ -39,17 +39,16 @@ class OfferItemManager {
         
         //print(json)
         guard let array = json["offers"] as? [AnyObject] else {
-            print("Expected 'results' array")
+            print("Expected 'offers' array")
             return offerItemArray
         }
         //print(array[0])
         
         var counter = 0
         var offerItem: OfferItem
-        for resultDict in array
-        {
+        for resultDict in array {
+            
             if let resultDict = resultDict as? [String: AnyObject] {
-                
                 
                 if let categoryArray = resultDict["categories"] as? [[String: AnyObject]] {
                     //print(categoryArray[0]["name"])
@@ -111,14 +110,13 @@ class OfferItemManager {
     }   // end of parseDataForCategory function
 
 
-    // let's also pass in a completion handler to update the UI table, and return
-    // an array of OfferItem's
+    // Find Offers for a given category from the JSON file
+    // Then, update the UI (or whatever we want the completion handler to do)
+    // with the Offers we found
     func getOffersForCategory(offerCategory: String, success:((offerItemArray: [OfferItem]) -> Void)) -> Void {
     
         var offerItemArray: [OfferItem] = []
         //print("called getOffersForCategory")
-        
-        //parseJSONFileForCategory(data, offerCategory)
         
         // read in local JSON file into an NSData object on a background thread
         let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
@@ -130,15 +128,12 @@ class OfferItemManager {
             
             // parse NSData object into OfferItem objects (continue on background thread)
             
-            
+            // pass OfferItemArray into the completion handler, then
             // run completion handler to update table UI (update UI on main thread)
             dispatch_async(dispatch_get_main_queue()) {
                 success(offerItemArray: offerItemArray)
             }
         }
-        
-        
-       // return offerItemArray
       
     }   // end getOffersForCategory
 

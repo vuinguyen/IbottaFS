@@ -57,6 +57,19 @@ class OfferDetailViewController: UITableViewController {
         }
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "RetailerList" {
+            
+            let controller = segue.destinationViewController as! RetailerListViewController
+            
+           // if tableView.indexPathForCell(sender as! UITableViewCell) != nil {
+              //  controller.retailerIds = offerDetailsToDisplay!.retailerIds as? [Int]
+           // }
+            
+            if offerDetailsToDisplay?.retailerIds != nil {
+                controller.retailerIds = offerDetailsToDisplay!.retailerIds as? [Int]
+            }
+        }
+    }
     
 }

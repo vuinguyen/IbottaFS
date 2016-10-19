@@ -10,18 +10,23 @@ import UIKit
 
 class OfferChecklistViewController: UITableViewController, OfferCategoryViewControllerDelegate {
 
-    var items: [OfferItem]
+    var items: [OfferItem] = [OfferItem]()
+    var allRetailers: [Retailer]?
     
-    required init?(coder aDecoder: NSCoder) {
+   // required init?(coder aDecoder: NSCoder) {
         
-        items = OfferChecklistManager.getDefaultOfferChecklist()
-        
-        super.init(coder: aDecoder)
-    }
+   //     super.init(coder: aDecoder)
+   // }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+         items = OfferChecklistManager.getDefaultOfferChecklist()
+         RetailerManager.getAllRetailersArray { (retailers) -> Void in
+              self.allRetailers = retailers
+              self.tableView.reloadData()
+          }
     }
 
     override func didReceiveMemoryWarning() {
