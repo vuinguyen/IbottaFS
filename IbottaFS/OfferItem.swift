@@ -10,8 +10,6 @@ import Foundation
 
 
 class OfferItem {
-    //var categoryDictionary = OfferCategoryManager().categoryDictionary
-    
     
     var id = 9999
     var name = "Awesome Product Name"
@@ -58,6 +56,4 @@ class OfferItem {
         return retailerString
     }
     
-    //var categories = [OfferCategoryManager.Category.Back2School,
-    //                  OfferCategoryManager.Category.Beverages]
 }

@@ -13,6 +13,7 @@ class OfferCategoryManager {
     static let filename = "Offers"
     
     // this was the "test" category set for initial development
+    // but now we parse the category data from the JSON file
     static var categorySet: Set<OfferCategory> = [
         OfferCategory("Personal Care"),
         OfferCategory("Health"),

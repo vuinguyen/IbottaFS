@@ -14,6 +14,8 @@ func == (lhs: OfferCategory, rhs: OfferCategory) -> Bool {
 }
 
 
+// Made the OfferCategory class "hashable" so that we can use 
+// the Set collection type on it (see "OfferCategoryManager.swift")
 class OfferCategory : Hashable {
     
     var name: String = "some category"
@@ -32,4 +34,4 @@ class OfferCategory : Hashable {
         }
     }
     
-    }
+}
