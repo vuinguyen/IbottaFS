@@ -8,6 +8,7 @@
 
 import UIKit
 
+// This shows all the retailers available for a user-selected offer
 class RetailerListViewController : UITableViewController {
     
     var retailerIds: [Int]?
@@ -15,8 +16,9 @@ class RetailerListViewController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        // Given the retailer ids (that came with the offer in the JSON file), grab
+        // the retailers for that offer and display them in the table
         if retailerIds != nil {
             print("in RetailerListViewController")
             print(retailerIds)

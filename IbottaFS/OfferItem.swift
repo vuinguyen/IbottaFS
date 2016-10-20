@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+// This class represents an offer on an actual product, plus some helper functions
 class OfferItem {
     
     var id = 9999
@@ -19,6 +19,9 @@ class OfferItem {
     var retailerArray: [Retailer] = [Retailer]()
     var retailerString: String = ""
     
+    // This returns a string with a list of retailers, separated by a "," comma in between
+    // each one. Useful for displaying all the retailers for an offer in the offer checklist
+    // screen. Useful to call if you don't have the retailer ids for that offer
     func getRetailerString() -> String {
         
         if retailerArray.isEmpty  || retailerString.characters.count >= 1 {
@@ -38,6 +41,9 @@ class OfferItem {
         return retailerString
     }
     
+    // This returns a string with a list of retailers, separated by a "," comma in between
+    // each one. Useful for displaying all the retailers for an offer in the offer checklist
+    // screen. Useful to call when you DO have the retailer ids for that offer
     func getRetailerString(withIds ids: [Int]) -> String {
         
         if retailerIds.count >= 1 {

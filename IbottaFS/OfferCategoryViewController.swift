@@ -13,6 +13,8 @@ protocol  OfferCategoryViewControllerDelegate {
     func offerCategoryViewControllerDelegate(controller: OfferCategoryViewController, didFinishAddingOffer offer: OfferItem)
 }
 
+// This screen displays all the possible categories for the offers. This way, the user can 
+// narrow down what offers they want to see by selecting the category in this screen
 class OfferCategoryViewController : UITableViewController, OfferAvailableViewControllerDelegate {
     
     var categories: [OfferCategory]?
@@ -24,7 +26,9 @@ class OfferCategoryViewController : UITableViewController, OfferAvailableViewCon
         // Do any additional setup after loading the view, typically from a nib.
         
         /*
-         // Call default categories that were hardcode before
+         // Call default categories that were hardcoded before
+         // Now, we dynamically get all the categories from the JSON file, hence 
+         // this section of code is commented out but left here for historical reasons
         let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
         dispatch_async(queue) {
         
@@ -34,7 +38,9 @@ class OfferCategoryViewController : UITableViewController, OfferAvailableViewCon
                 self.tableView.reloadData()
             }
         }
- */
+         */
+        
+        // We grab all the categories from the JSON file and update the table
         OfferCategoryManager.getAllCategoriesArray() { (categoriesArray) -> Void in
             self.categories = categoriesArray
             self.tableView.reloadData()
@@ -46,10 +52,13 @@ class OfferCategoryViewController : UITableViewController, OfferAvailableViewCon
         // Dispose of any resources that can be recreated.
     }
     
+
+    // This gets called when a user selects "Add" from the Offer detail screen. We "roll back" the screens
+    // to the Offer checklist when that happens, and continue passing the newly selected offer back to the
+    // Offer checklist so that the offer can be added there and the checklist updated
     func offerAvailableViewController(controller: OfferAvailableViewController, didFinishAddingOffer offer: OfferItem) {
+        
         print("in offerAvailableViewController delegate")
-        
-        
         
         navigationController?.popViewControllerAnimated(true)
         

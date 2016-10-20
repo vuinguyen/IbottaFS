@@ -8,6 +8,7 @@
 
 import Foundation
 
+// This class manages data for retailers and the Retailer object
 class RetailerManager {
     
     static let filename = "Retailers"

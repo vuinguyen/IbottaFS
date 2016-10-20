@@ -10,8 +10,11 @@ import Foundation
 import UIKit
 
 protocol OfferDetailViewControllerDelegate {
+    // keep popping views off the navcontroller stack and pass the OfferItem back to the checklist screen
     func offerDetailViewController(controller: OfferDetailViewController, didFinishAddingOffer offer: OfferItem)
 }
+
+// This screen provides the details for a user-selected offer
 
 class OfferDetailViewController: UITableViewController {
     
@@ -21,6 +24,8 @@ class OfferDetailViewController: UITableViewController {
     
     @IBOutlet weak var addBarButton: UIBarButtonItem!
     
+    // If the user selects "Add", this function will start the process of popping the previous
+    // screens off the stack to get back to the Offer checklist, and add this offer to the Offer checklist
     @IBAction func addOfferToList(sender: AnyObject) {
         print("add button pressed")
         delegate?.offerDetailViewController(self, didFinishAddingOffer: offerDetailsToDisplay!)
@@ -47,6 +52,10 @@ class OfferDetailViewController: UITableViewController {
             }
         }
         
+        // If we are on the path of selecting offers, then the user will see an
+        // "Add" button in the detail screen. If we get to this detail screen from
+        // the Offer checklist, then the "Add" button will not be enabled because
+        // the offer has already been added to the checklist!
         if let addItem = addOffer {
             if (addItem == true) {
                 addBarButton.enabled = true
@@ -57,6 +66,8 @@ class OfferDetailViewController: UITableViewController {
         }
     }
     
+    // If the user selects "Retailers for this Offer", this will take them to the Retailer List
+    // screen for that offer
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "RetailerList" {
             

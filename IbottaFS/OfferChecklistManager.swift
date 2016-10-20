@@ -8,6 +8,8 @@
 
 import Foundation
 
+// This class provides the hardcoded data for the offer checklist when the app
+// first loads
 class OfferChecklistManager {
     
     class func getDefaultOfferChecklist() -> [OfferItem] {

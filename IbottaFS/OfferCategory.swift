@@ -13,6 +13,8 @@ func == (lhs: OfferCategory, rhs: OfferCategory) -> Bool {
     return lhs.hashValue == rhs.hashValue
 }
 
+// This class represents a category that an offer could belong to
+// i.e. Health, Beverages, etc.
 
 // Made the OfferCategory class "hashable" so that we can use 
 // the Set collection type on it (see "OfferCategoryManager.swift")

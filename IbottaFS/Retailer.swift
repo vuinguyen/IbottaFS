@@ -8,6 +8,7 @@
 
 import Foundation
 
+// This class represents a Retailer, i.e. Target, Walmart, etc.
 class Retailer {
     
     var id = 9999

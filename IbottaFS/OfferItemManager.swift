@@ -8,6 +8,7 @@
 
 import Foundation
 
+// This class manages offers and the OfferItem object
 class OfferItemManager {
     
     let filename = "Offers"

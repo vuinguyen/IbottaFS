@@ -8,9 +8,12 @@
 
 import Foundation
 
+// This class manages categories and the OfferCategory object
 class OfferCategoryManager {
     
     static let filename = "Offers"
+    
+    // Functions and data for intial development: BEGIN
     
     // this was the "test" category set for initial development
     // but now we parse the category data from the JSON file
@@ -24,10 +27,6 @@ class OfferCategoryManager {
         OfferCategory("Back 2 School")
     ]
     
-    static var allCategoriesSet: Set<OfferCategory> = Set<OfferCategory>()
-    
-    static var allCategoriesArray: [OfferCategory] = [OfferCategory]()
-    
     static func getCategorySet() -> Set<OfferCategory> {
         return categorySet
     }
@@ -39,10 +38,17 @@ class OfferCategoryManager {
         }
         return categoryArray
     }
+    // Functions and data for initial development: END
+    
+    // Everything after this is for the current development, grabbing 
+    // categories dynamically from the JSON file instead of displaying hardcode data
+    
+    static var allCategoriesSet: Set<OfferCategory> = Set<OfferCategory>()
+    
+    static var allCategoriesArray: [OfferCategory] = [OfferCategory]()
     
     // this function reads local JSON file and returns JSON in NSData format
     private static func readLocalJSONFile() -> NSData  {
-        
         
         let filePath = NSBundle.mainBundle().pathForResource(filename, ofType:"json")
         let data = try! NSData(contentsOfFile:filePath!,
@@ -99,8 +105,9 @@ class OfferCategoryManager {
         return offerCategoryArray
     }
     
+    // Grab all the possible categories from the JSON file and then run the completion
+    // handler on our category data
     static func getAllCategoriesArray(success:(allCategoriesArray: [OfferCategory]) -> Void) -> Void {
-        
         
         // read in local JSON file into an NSData object on a background thread
         let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
