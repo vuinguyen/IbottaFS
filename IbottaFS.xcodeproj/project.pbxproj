@@ -117,6 +117,32 @@
 			path = ../data;
 			sourceTree = "<group>";
 		};
+		52B000EB1DB92CD300A936F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				527A63AF1DB7199E001444D0 /* RetailerManager.swift */,
+				527A63B31DB7216A001444D0 /* Retailer.swift */,
+				527A63B71DB7FA9E001444D0 /* OfferCategory.swift */,
+				52ECB3D71DB3323000CC6B65 /* OfferCategoryManager.swift */,
+				52ECB3CD1DB27A9E00CC6B65 /* OfferItem.swift */,
+				527A63AD1DB55A1F001444D0 /* OfferItemManager.swift */,
+				527A63B11DB7210A001444D0 /* OfferChecklistManager.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		52B000EC1DB92F9D00A936F8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				52ECB3A11DB17C2300CC6B65 /* OfferChecklistViewController.swift */,
+				52ECB3D11DB2C0C900CC6B65 /* OfferDetailViewController.swift */,
+				527A63A01DB4869B001444D0 /* OfferCategoryViewController.swift */,
+				527A63A21DB539D6001444D0 /* OfferAvailableViewController.swift */,
+				527A63B51DB7E84F001444D0 /* RetailerListViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		52ECB3931DB17C2300CC6B65 = {
 			isa = PBXGroup;
 			children = (
@@ -140,25 +166,15 @@
 		52ECB39E1DB17C2300CC6B65 /* IbottaFS */ = {
 			isa = PBXGroup;
 			children = (
+				52B000EC1DB92F9D00A936F8 /* ViewControllers */,
+				52B000EB1DB92CD300A936F8 /* Models */,
 				527A63A41DB540F1001444D0 /* Data */,
 				52ECB39F1DB17C2300CC6B65 /* AppDelegate.swift */,
-				52ECB3A11DB17C2300CC6B65 /* OfferChecklistViewController.swift */,
 				52ECB3A31DB17C2300CC6B65 /* Main.storyboard */,
 				52ECB3A61DB17C2300CC6B65 /* Assets.xcassets */,
 				52ECB3A81DB17C2300CC6B65 /* LaunchScreen.storyboard */,
 				52ECB3AB1DB17C2300CC6B65 /* Info.plist */,
-				52ECB3CD1DB27A9E00CC6B65 /* OfferItem.swift */,
-				52ECB3D11DB2C0C900CC6B65 /* OfferDetailViewController.swift */,
 				52ECB3D31DB3028400CC6B65 /* UIImageView+DownloadImage.swift */,
-				52ECB3D71DB3323000CC6B65 /* OfferCategoryManager.swift */,
-				527A63A01DB4869B001444D0 /* OfferCategoryViewController.swift */,
-				527A63A21DB539D6001444D0 /* OfferAvailableViewController.swift */,
-				527A63AD1DB55A1F001444D0 /* OfferItemManager.swift */,
-				527A63AF1DB7199E001444D0 /* RetailerManager.swift */,
-				527A63B11DB7210A001444D0 /* OfferChecklistManager.swift */,
-				527A63B31DB7216A001444D0 /* Retailer.swift */,
-				527A63B51DB7E84F001444D0 /* RetailerListViewController.swift */,
-				527A63B71DB7FA9E001444D0 /* OfferCategory.swift */,
 			);
 			path = IbottaFS;
 			sourceTree = "<group>";

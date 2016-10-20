@@ -9,6 +9,7 @@
 import XCTest
 @testable import IbottaFS
 
+// This class tests the Retailer and RetailerManager classes
 class RetailerTests: XCTestCase {
     var retailerArray: [Retailer]!
     
