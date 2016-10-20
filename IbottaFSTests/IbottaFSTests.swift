@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import IbottaFS
+//@testable import Retailer
 
 class IbottaFSTests: XCTestCase {
     
