@@ -256,7 +256,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Offer Details" id="Lcr-zT-Zgg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ZKO-SP-lpw">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="ZKO-SP-lpw">
                             <connections>
                                 <action selector="save:" destination="k8u-Yi-zEo" id="gBY-oO-PRB"/>
                             </connections>
