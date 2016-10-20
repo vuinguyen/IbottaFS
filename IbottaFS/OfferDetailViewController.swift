@@ -19,12 +19,10 @@ class OfferDetailViewController: UITableViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var productImage: UIImageView!
     
-    // This button used to say "Save" but I've since changed it to
-    // say "Add" but haven't had time to refactor this yet
-    @IBOutlet weak var saveBarButton: UIBarButtonItem!
+    @IBOutlet weak var addBarButton: UIBarButtonItem!
     
-    @IBAction func save(sender: AnyObject) {
-        print("save button pressed")
+    @IBAction func addOfferToList(sender: AnyObject) {
+        print("add button pressed")
         delegate?.offerDetailViewController(self, didFinishAddingOffer: offerDetailsToDisplay!)
     }
     
@@ -51,11 +49,11 @@ class OfferDetailViewController: UITableViewController {
         
         if let addItem = addOffer {
             if (addItem == true) {
-                saveBarButton.enabled = true
+                addBarButton.enabled = true
             }
         }
         else {
-            saveBarButton.enabled = false
+            addBarButton.enabled = false
         }
     }
     
@@ -63,10 +61,6 @@ class OfferDetailViewController: UITableViewController {
         if segue.identifier == "RetailerList" {
             
             let controller = segue.destinationViewController as! RetailerListViewController
-            
-           // if tableView.indexPathForCell(sender as! UITableViewCell) != nil {
-              //  controller.retailerIds = offerDetailsToDisplay!.retailerIds as? [Int]
-           // }
             
             if offerDetailsToDisplay?.retailerIds != nil {
                 controller.retailerIds = offerDetailsToDisplay!.retailerIds as? [Int]

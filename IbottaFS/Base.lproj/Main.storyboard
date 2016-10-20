@@ -256,17 +256,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Offer Details" id="Lcr-zT-Zgg">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="ZKO-SP-lpw">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="ZKO-SP-lpw" userLabel="Add Bar Button">
                             <connections>
-                                <action selector="save:" destination="k8u-Yi-zEo" id="gBY-oO-PRB"/>
+                                <action selector="addOfferToList:" destination="k8u-Yi-zEo" id="FEn-XS-wKe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addBarButton" destination="ZKO-SP-lpw" id="8VM-qx-6x4"/>
                         <outlet property="descriptionLabel" destination="Ksj-9E-FdV" id="3q8-2q-MdY"/>
                         <outlet property="nameLabel" destination="w86-wK-g2Y" id="2t1-oy-rNQ"/>
                         <outlet property="productImage" destination="dwJ-Ak-MhK" id="XyS-QV-f9t"/>
-                        <outlet property="saveBarButton" destination="ZKO-SP-lpw" id="3S7-Aa-WZk"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMY-jb-PgM" userLabel="First Responder" sceneMemberID="firstResponder"/>
