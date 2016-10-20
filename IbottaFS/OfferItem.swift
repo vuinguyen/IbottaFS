@@ -27,9 +27,13 @@ class OfferItem {
             return retailerString
         }
         else {
+            var counter = 0
             for retailer in retailerArray {
                 retailerString.appendContentsOf(retailer.name)
-                retailerString.appendContentsOf(", ")
+                if (counter < retailerArray.count - 1) {
+                    retailerString.appendContentsOf(", ")
+                }
+                counter = counter + 1
             }
         }
         
@@ -40,10 +44,15 @@ class OfferItem {
         
         if retailerIds.count >= 1 {
             retailerArray = RetailerManager.getRetailersForIds(retailerIds as! [Int])
+            var counter = 0
             for retailer in retailerArray {
                 retailerString.appendContentsOf(retailer.name)
-                retailerString.appendContentsOf(", ")
+                if (counter < retailerArray.count - 1) {
+                    retailerString.appendContentsOf(", ")
+                }
+                counter = counter + 1
             }
+           
         }
         
         return retailerString
